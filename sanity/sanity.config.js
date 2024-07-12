@@ -1,7 +1,9 @@
-import {defineConfig} from 'sanity'
-import {structureTool} from 'sanity/structure'
-import {visionTool} from '@sanity/vision'
-import {schemaTypes} from './schemaTypes'
+// sanity.config.js
+
+import { defineConfig } from 'sanity';
+import { deskTool } from 'sanity/desk';
+import { visionTool } from '@sanity/vision';
+import { schemaTypes } from './schemas'; // Ensure this path is correct
 
 export default defineConfig({
   name: 'default',
@@ -10,9 +12,9 @@ export default defineConfig({
   projectId: 's776d4ag',
   dataset: 'production',
 
-  plugins: [structureTool(), visionTool()],
+  plugins: [deskTool(), visionTool()],
 
   schema: {
     types: schemaTypes,
   },
-})
+});

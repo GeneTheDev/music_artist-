@@ -14,3 +14,28 @@ body {
 code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
+
+.container {
+    padding-left: 0%;
+    padding-right: 0%;
+}
+
+/* Add custom animation to your global styles */
+@keyframes slide-vertically {
+    0% {
+      transform: translateY(100%);
+    }
+    100% {
+      transform: translateY(-100%);
+    }
+  }
+  
+  .banner-container {
+    overflow: hidden; /* Ensure the text is hidden when it's outside the container */
+  }
+  
+  .sliding-text {
+    display: inline-block;
+    animation: slide-vertically 5s linear infinite;
+  }
+  

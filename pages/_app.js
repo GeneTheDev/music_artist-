@@ -1,12 +1,14 @@
 import "../styles/globals.css";
 import Navbar from "../components/comm/Navbar";
+import { CursorProvider } from "../context/StateContext";
 
 function App({ Component, pageProps }) {
-
   return (
     <>
-      <Navbar />
-      <Component {...pageProps} />
+      <CursorProvider>
+        <Navbar />
+        <Component {...pageProps} />
+      </CursorProvider>
     </>
   );
 }

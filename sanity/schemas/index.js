@@ -1,5 +1,6 @@
 // schemas/index.js
 
-import heroSchema from './heroschema';
+import bannerSchema from './bannerschem'
+import heroSchema from './heroschema'
 
-export const schemaTypes = [heroSchema];
+export const schemaTypes = [heroSchema, bannerSchema]

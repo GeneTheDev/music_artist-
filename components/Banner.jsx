@@ -21,12 +21,13 @@ const Banner = () => {
       onMouseLeave={() => setIsHovering("")}
       className="relative w-full h-24 bg-[#ff0012] flex items-center overflow-hidden"
     >
-        <h1 id="first" className="move-text text-3xl md:text-6xl font-anton font-semibold uppercase tracking-widest" style={{
-            animation: "slide 6s linear infinite", // Adjust animation duration as needed
+        <h1 id="first" className="track move-text text-3xl md:text-6xl font-anton font-semibold uppercase tracking-widest" style={{
+            animation: "slide 20s linear infinite",
           }}>
-          {bannerData ? bannerData.title : "Welcome to Our Website"}
+            EliEzer O.R EliEzer O.R EliEzer O.R EliEzer O.R EliEzer O.R EliEzer O.R EliEzer O.R EliEzer O.R
+            EliEzer O.R EliEzer O.R EliEzer O.R EliEzer O.R EliEzer O.R EliEzer O.R EliEzer O.R EliEzer O.R
         </h1>
-      </div>
+    </div>
   );
 };
 

@@ -1,4 +1,5 @@
 import React from "react";
+import { AiOutlineInstagram, AiOutlineTwitter} from 'react-icons/ai';
 
 const Navbar = () => {
   return (
@@ -20,7 +21,12 @@ const Navbar = () => {
           <li>
             <a href="/contact" className="hover:text-gray-300">Contact</a>
           </li>
+          <p className="icons">
+        <AiOutlineInstagram />
+        <AiOutlineTwitter />
+      </p>
         </ul>
+        
       </div>
     </nav>
   );

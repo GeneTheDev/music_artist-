@@ -13,10 +13,16 @@ code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
 
+.track {
+  position: absolute;
+  white-space: nowrap;
+  will-change: transform;
+  animation: marquee 1s linear infinite;
+  width: 180%;
+}
+
 @keyframes slide {
-  0% {
-    transform: translateX(100%);
-  }
+ 
   50% {
     transform: translateX(0%);
   }
@@ -24,7 +30,6 @@ code {
     transform: translateX(-100%);
   }
 }
-
 
 .move-text {
   display: inline-block;
@@ -35,3 +40,29 @@ code {
 #second {
   animation-delay: 2s; /* Adjust delay for sequential animation */
 }
+
+.btn-container{
+  width: 400px;
+  margin: auto;
+}
+.btn{
+  width: 100%;
+  max-width: 400px;
+  padding: 10px 12px;
+  border-radius: 15px;
+  border: none;
+  font-size: 20px;
+  margin-top: 10px;
+  margin-top: 40px;
+  text-transform: uppercase;
+  background-color: #f02d34;
+  color: #fff;
+  cursor: pointer;
+    transform: scale(1, 1);
+  transition: transform 0.5s ease;
+}
+.btn:hover{
+  transform: scale(1.1,1.1);
+}
+
+

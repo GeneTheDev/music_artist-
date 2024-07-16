@@ -10,7 +10,7 @@ import twitterIcon from '@iconify/icons-simple-icons/twitter';
 
 const Footer = ({ site }) => {
   return (
-    <footer id="contact" className="bg-gray-900 text-white text-left font-light">
+    <footer id="contact" className="bg-gray-900 text-white text-left font-light" >
       <div className="container mx-auto py-8 px-4">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
@@ -56,7 +56,7 @@ const Footer = ({ site }) => {
             <ul className="space-y-2">
               <li>
                 <span>Email: </span>
-                <a href="mailto:info@bayzamusic.com" target="_blank" className="hover:underline">info@EliEzer.com</a>
+                <a href="info@EliEzer.com" target="_blank" className="hover:underline">info@EliEzer.com</a>
               </li>
             </ul>
           </div>

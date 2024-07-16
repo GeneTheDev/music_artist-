@@ -32,7 +32,7 @@ const Hero = () => {
         <div
       className="absolute top-0 left-0 right-0 bottom-0"
       style={{
-        backgroundColor: 'rgba(0, 0, 0, 0.5)', // Adjust color and opacity as needed
+        background: 'linear-gradient(to right, rgba(255, 0, 0, 0.1), rgba(200, 200, 200, 0.4))', // Example gradient from black to white with opacity
       }}
     >
       <div className="flex items-center justify-center min-h-screen"> {/* Adjusted for vertical and horizontal centering */}

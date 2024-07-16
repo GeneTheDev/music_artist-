@@ -25,7 +25,7 @@ function App({ Component, pageProps }) {
   return (
     <>
       <CursorProvider>
-        <Navbar />
+        <Navbar site={siteData} />
         <Component {...pageProps} />
         <Footer site={siteData} />
       </CursorProvider>

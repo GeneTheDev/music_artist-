@@ -1,6 +1,6 @@
-const recentSchema = {
-  name: 'recent',
-  title: 'Recent',
+const aboutschema = {
+  name: 'about',
+  title: 'About',
   type: 'document',
   fields: [
     {
@@ -11,17 +11,14 @@ const recentSchema = {
     {
       name: 'description',
       title: 'Description',
-      type: 'string',
+      type: 'text',
     },
     {
       name: 'image',
       title: 'Image',
       type: 'image',
-      options: {
-        hotspot: true,
-      },
     },
   ],
 }
 
-export default recentSchema
+export default aboutschema

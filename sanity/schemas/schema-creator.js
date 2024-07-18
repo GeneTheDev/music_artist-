@@ -7,8 +7,9 @@ import heroSchema from './heroschema'
 import bannerSchema from './bannerschem'
 import recentSchema from './recentschema'
 import videoSchema from './videoschema'
+import aboutschema from './aboutschema'
 
 export default createSchema({
   name: 'default',
-  types: schemaTypes.concat([heroSchema, bannerSchema, recentSchema, videoSchema]),
+  types: schemaTypes.concat([heroSchema, bannerSchema, recentSchema, videoSchema, aboutschema]),
 })

@@ -44,7 +44,9 @@ const Hero = () => {
             <p className="text-lg md:text-xl p-2 text-[#fff]">
               {heroData.description || 'Discover our services and offers.'}
             </p>
-            <button className="px-4 py-2 mt-4 bg-blue-600 text-white rounded hover:bg-blue-700 transition duration-300">
+            <button className="px-4 py-2 mt-4 bg-blue-600 text-white rounded hover:bg-blue-700 transition duration-300 " style={{
+      background: 'linear-gradient(to right, rgba(255, 0, 0, 0.9), rgba(255, 200, 200, 0.9))',
+    }}>
               Learn More
             </button>
           </div>

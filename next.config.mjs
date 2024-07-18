@@ -7,7 +7,10 @@ const nextConfig = {
     NEXT_PUBLIC_SANITY_API_VERSION: process.env.NEXT_PUBLIC_SANITY_API_VERSION,
     STRIPE_SECRET_KEY: process.env.STRIPE_SECRET_KEY,
   },
-  
+  webpack(config, { buildId, dev, isServer, defaultLoaders, webpack }) {
+    // Note: If you need custom Webpack configurations, add them here.
+    return config;
+  },
 };
 
 export default nextConfig;

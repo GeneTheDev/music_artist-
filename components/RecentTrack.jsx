@@ -60,7 +60,9 @@ const RecentTrack = ({recentTrack}) => {
               >
                 <ul className="flex flex-wrap items-center">
                   <li>
-                  <button type="button" className="px-4 py-2 mt-4 bg-blue-600 text-white rounded hover:bg-blue-700 transition duration-300">
+                  <button type="button" className="px-4 py-2 mt-4 bg-blue-600 text-white rounded hover:bg-blue-700 transition duration-300" style={{
+      background: 'linear-gradient(to right, rgba(255, 0, 0, 0.9), rgba(255, 200, 200, 0.9))',
+    }}>
                     {recentTrack ? recentTrack.buttonText : "Play"}
                   </button>
                   </li>
@@ -85,7 +87,7 @@ const RecentTrack = ({recentTrack}) => {
                   src={image && urlFor(image).url()}
                   loading="lazy"
                   alt="hero"
-                  className="max-w-full lg:ml-auto rounded-[6%] h-[300px] sm:h-[400px] lg:h-[500px]"
+                  className="max-w-full lg:ml-auto rounded-[6%] h-[300px] sm:h-[400px] lg:h-[500px] "
                 />
               </motion.div>
             </div>

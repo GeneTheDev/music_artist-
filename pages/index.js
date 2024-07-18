@@ -4,6 +4,7 @@ import { Hero } from "../components";
 import Banner from "../components/Banner";
 import RecentTrack from "../components/RecentTrack";
 import Videos from "../components/Videos";
+import About from "../components/comm/About";
 
 const Home = () => {
   return (
@@ -12,6 +13,7 @@ const Home = () => {
       <Banner />
       <RecentTrack />
       <Videos />
+      <About />
     </div>
   );
 };

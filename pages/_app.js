@@ -1,4 +1,5 @@
 import "../styles/globals.css";
+import "../styles/page.module.css";
 import Navbar from "../components/comm/Navbar";
 import { CursorProvider } from "../context/StateContext";
 import { Footer } from "../components";

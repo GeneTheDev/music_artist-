@@ -7,6 +7,7 @@ import youtubeIcon from '@iconify/icons-simple-icons/youtube';
 import instagramIcon from '@iconify/icons-simple-icons/instagram';
 import facebookIcon from '@iconify/icons-simple-icons/facebook';
 import twitterIcon from '@iconify/icons-simple-icons/twitter';
+import Link from 'next/link';
 
 const Footer = ({ site }) => {
   return (
@@ -18,47 +19,47 @@ const Footer = ({ site }) => {
           <div>
             <h4 className="text-lg font-medium mb-4">Stream Music</h4>
             <ul className="space-y-2 text-white">
-              <li><a target="_blank" href={site.platforms.spotify} className="hover:underline text-white">Spotify</a></li>
-              <li><a target="_blank" href={site.platforms.soundcloud} className="hover:underline text-white">SoundCloud</a></li>
-              <li><a target="_blank" href={site.platforms.youtube} className="hover:underline text-white">YouTube</a></li>
-              <li><a target="_blank" href={site.platforms.apple} className="hover:underline text-white">Apple Music</a></li>
+              <li><Link target="_blank" href={site.platforms.spotify} className="hover:underline text-white">Spotify</Link></li>
+              <li><Link target="_blank" href={site.platforms.soundcloud} className="hover:underline text-white">SoundCloud</Link></li>
+              <li><Link target="_blank" href={site.platforms.youtube} className="hover:underline text-white">YouTube</Link></li>
+              <li><Link target="_blank" href={site.platforms.apple} className="hover:underline text-white">Apple Music</Link></li>
             </ul>
           </div>
           <div>
             <h4 className="text-lg font-medium mb-4">Buy Music</h4>
             <ul className="space-y-2">
-              <li><a target="_blank" href={site.platforms.itunes} className="hover:underline text-white">iTunes</a></li>
-              <li><a target="_blank" href={site.platforms.beatport} className="hover:underline text-white">Beatport</a></li>
-              <li><a target="_blank" href={site.platforms.amazon} className="hover:underline text-white">Amazon</a></li>
-              <li><a target="_blank" href={site.platforms.bandcamp} className="hover:underline text-white">Bandcamp</a></li>
+              <li><Link target="_blank" href={site.platforms.itunes} className="hover:underline text-white">iTunes</Link></li>
+              <li><Link target="_blank" href={site.platforms.beatport} className="hover:underline text-white">Beatport</Link></li>
+              <li><Link target="_blank" href={site.platforms.amazon} className="hover:underline text-white">Amazon</Link></li>
+              <li><Link target="_blank" href={site.platforms.bandcamp} className="hover:underline text-white">Bandcamp</Link></li>
             </ul>
           </div>
           <div>
             <h4 className="text-lg font-medium mb-4">Contact</h4>
             <ul className="flex space-x-4 mb-4">
               <li>
-                <a href={site.platforms.spotify} target="_blank"><Icon icon={spotifyIcon} className="text-2xl text-white" /></a>
+                <Link href={site.platforms.spotify} target="_blank"><Icon icon={spotifyIcon} className="text-2xl text-white" /></Link>
               </li>
               <li>
-                <a href={site.platforms.soundcloud} target="_blank"><Icon icon={soundcloudIcon} className="text-2xl text-white" /></a>
+                <Link href={site.platforms.soundcloud} target="_blank"><Icon icon={soundcloudIcon} className="text-2xl text-white" /></Link>
               </li>
               <li>
-                <a href={site.platforms.youtube} target="_blank"><Icon icon={youtubeIcon} className="text-2xl text-white" /></a>
+                <Link href={site.platforms.youtube} target="_blank"><Icon icon={youtubeIcon} className="text-2xl text-white" /></Link>
               </li>
               <li>
-                <a href={site.socials.instagram} target="_blank"><Icon icon={instagramIcon} className="text-2xl text-white" /></a>
+                <Link href={site.socials.instagram} target="_blank"><Icon icon={instagramIcon} className="text-2xl text-white" /></Link>
               </li>
               <li>
-                <a href={site.socials.facebook} target="_blank"><Icon icon={facebookIcon} className="text-2xl text-white" /></a>
+                <Link href={site.socials.facebook} target="_blank"><Icon icon={facebookIcon} className="text-2xl text-white" /></Link>
               </li>
               <li>
-                <a href={site.socials.twitter} target="_blank"><Icon icon={twitterIcon} className="text-2xl text-white" /></a>
+                <Link href={site.socials.twitter} target="_blank"><Icon icon={twitterIcon} className="text-2xl text-white" /></Link>
               </li>
             </ul>
             <ul className="space-y-2">
               <li>
                 <span>Email: </span>
-                <a href="info@EliEzer.com" target="_blank" className="hover:underline text-white">info@EliEzer.com</a>
+                <Link href="info@EliEzer.com" target="_blank" className="hover:underline text-white">info@EliEzer.com</Link>
               </li>
             </ul>
           </div>

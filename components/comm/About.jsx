@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { sanityClient, urlFor } from '../../components/lib/client';
+import Image from 'next/image';
 
 const About = () => {
   const [aboutData, setAboutData] = useState(null);
@@ -22,11 +23,13 @@ const About = () => {
         <div className="image-container mb-4 md:mb-0 md:mr-8">
           {/* Use urlFor function to generate the image URL */}
           {aboutData.image && (
-           <img 
+           <Image 
            src={urlFor(aboutData.image).url()} 
-              alt="About Us" 
-              style={{ width: '100%', height: '600px', objectFit: 'cover' }}
-           className="rounded-lg" 
+              alt="About Us"
+              width={722} // Adjust based on the actual or desired width
+              height={1030} // Adjust based on the actual or desired height
+              objectFit="cover"
+              className="rounded-lg" 
          />
           )}
         </div>

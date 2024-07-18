@@ -4,6 +4,7 @@ import { sanityClient } from "../components/lib/client";
 
 
 import { urlFor } from '../components/lib/client';
+import Image from "next/image";
 
 const RecentTrack = ({recentTrack}) => {
   const [recentTrackData, setRecentTrackData] = useState(null);
@@ -83,11 +84,13 @@ const RecentTrack = ({recentTrack}) => {
                 transition={{ duration: 0.5, delay: 0.25 }}
                 className="relative z-10 inline-block pt-11 lg:pt-0 mt-6"
               >
-                <img
+                <Image
                   src={image && urlFor(image).url()}
-                  loading="lazy"
                   alt="hero"
-                  className="max-w-full lg:ml-auto rounded-[6%] h-[300px] sm:h-[400px] lg:h-[500px] "
+                  width={1067} // Adjust based on the actual or desired width
+                  height={1600} // Adjust based on the actual or desired height
+                  className="max-w-full lg:ml-auto rounded-[6%] h-[300px] sm:h-[400px] lg:h-[500px]"
+                  loading="lazy"
                 />
               </motion.div>
             </div>

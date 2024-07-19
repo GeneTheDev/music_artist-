@@ -1,5 +1,7 @@
 // sanity.config.js
 
+'use client'
+
 import {defineConfig} from 'sanity'
 import {deskTool} from 'sanity/desk'
 import {visionTool} from '@sanity/vision'
@@ -12,7 +14,14 @@ export default defineConfig({
   projectId: 's776d4ag',
   dataset: 'production',
 
-  plugins: [deskTool(), visionTool()],
+  basePath: '/studio',
+
+  plugins: [
+    structureTool(),
+    // Vision is a tool that lets you query your content with GROQ in the studio
+    // https://www.sanity.io/docs/the-vision-plugin
+    visionTool({defaultApiVersion: apiVersion}),
+  ],
 
   schema: {
     types: schemaTypes,

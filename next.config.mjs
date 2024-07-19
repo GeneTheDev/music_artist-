@@ -8,7 +8,13 @@ const nextConfig = {
     STRIPE_SECRET_KEY: process.env.STRIPE_SECRET_KEY,
   },
   images: {
-    domains: ["cdn.sanity.io"],
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "cdn.sanity.io",
+        // Optionally, you can add pathname: '/path/to/images/*' for more specific patterns
+      },
+    ],
   },
 };
 

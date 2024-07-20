@@ -5,10 +5,7 @@
 import {defineConfig} from 'sanity'
 import {deskTool} from 'sanity/desk'
 import {visionTool} from '@sanity/vision'
-import {structureTool} from 'sanity/structure'
 import {schemaTypes} from './schemas' // Ensure this path is correct
-
-const apiVersion = '2024-07-03' // Define the apiVersion
 
 export default defineConfig({
   name: 'default',

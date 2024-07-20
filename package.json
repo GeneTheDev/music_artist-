@@ -23,7 +23,6 @@
     "styled-components": "^6.1.11"
   },
   "devDependencies": {
-    "@babel/preset-react": "^7.16.7",
     "@types/event-source-polyfill": "^1.0.5",
     "@types/eventsource": "^1.1.15",
     "@types/hast": "^3.0.4",

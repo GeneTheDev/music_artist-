@@ -1,4 +1,3 @@
-import React from "react";
 import "../styles/globals.css";
 import "../styles/page.module.css";
 import Navbar from "../components/comm/Navbar";

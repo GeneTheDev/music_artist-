@@ -13,30 +13,31 @@ const About = () => {
       });
   }, []);
 
-  if (!aboutData) {
-    return <div>Loading...</div>;
-  }
-
   return (
-    <div className="container mx-auto p-4 pt-[120px] pb-[110px]">
+    <div className="container mx-auto p-4 pt-[150px] pb-[110px]">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 items-center">
         <div className="image-container mb-4 md:mb-0 md:mr-8">
-          {/* Use urlFor function to generate the image URL */}
-          {aboutData.image && (
-           <Image 
-           src={urlFor(aboutData.image).url()} 
-              alt="About Us"
-              width={722} // Adjust based on the actual or desired width
-              height={1030} // Adjust based on the actual or desired height
-              objectFit="cover"
-              className="rounded-lg" 
-         />
+          {/* Check if aboutData is not null and if image is present */}
+          {aboutData?.image && (
+            <div className="relative w-full max-w-[500px] mx-auto">
+              <Image 
+                src={urlFor(aboutData.image).url()} 
+                alt="About Us"
+                layout="responsive"
+                width={1067} 
+                height={1600} 
+                className="rounded-[6%] w-full h-auto"
+                loading="lazy"
+              />
+            </div>
           )}
         </div>
         <div className="text-container">
-          <h2 className="text-2xl font-bold mb-4">{aboutData.title || 'About Us'}</h2>
+          <h2 className="text-2xl font-bold mb-4">
+            {aboutData?.title || 'About Us'}
+          </h2>
           <p className="text-lg">
-            {aboutData.description || 'Description not available.'}
+            {aboutData?.description || 'Description not available.'}
           </p>
         </div>
       </div>

@@ -4,7 +4,7 @@ import { sanityClient } from "../components/lib/client";
 import { urlFor } from '../components/lib/client';
 import Image from "next/image";
 
-const RecentTrack = ({ recentTrack }) => {
+const RecentTrack = () => {
   const [recentTrackData, setRecentTrackData] = useState(null);
 
   useEffect(() => {
@@ -16,14 +16,8 @@ const RecentTrack = ({ recentTrack }) => {
       });
   }, []);
 
-  if (!recentTrackData) {
-    return <div>Loading...</div>;
-  }
-
-  const { title, subtitle, subtitle2, subtitle3, buttonText, image } = recentTrackData;
-
   return (
-    <div className="relative pt-[120px] pb-[110px] lg:pt-[150px] bg-[#e0e0e0]">
+    <div className="relative pt-[120px] pb-[110px] lg:pt-[150px] bg-[#fff]">
       <div className="container mx-auto px-4 md:px-10 flex flex-wrap lg:items-start lg:text-left text-center lg:text-left">
         <div className="w-full lg:w-5/12 px-4 mb-10 lg:mb-0 flex flex-col items-center lg:items-start justify-center">
           <div className="hero-content">
@@ -37,18 +31,18 @@ const RecentTrack = ({ recentTrack }) => {
               transition={{ duration: 0.5, delay: 0.25 }}
             >
               <h1 className="text-black mb-3 font-bold leading-snug text-3xl sm:text-[42px] lg:text-[40px] xl:text-[32px]">
-                {title || "Latest Track"}
+                {recentTrackData?.title || "Latest Track"}
                 <br />
                 <span className="text-5xl sm:text-7xl">
-                  {subtitle || "Listen Now"}
+                  {recentTrackData?.subtitle || "Listen Now"}
                 </span>
               </h1>
               <span className="text-5xl sm:text-7xl">
-                {subtitle2 || "Listen Now"}
+                {recentTrackData?.subtitle2 || "Listen Now"}
                 <br />
               </span>
               <span className="text-5xl sm:text-7xl">
-                {subtitle3 || "Listen Now"}
+                {recentTrackData?.subtitle3 || "Listen Now"}
               </span>
             </motion.div>
             <motion.div
@@ -69,7 +63,7 @@ const RecentTrack = ({ recentTrack }) => {
                       background: 'linear-gradient(to right, rgba(255, 0, 0, 0.9), rgba(255, 200, 200, 0.9))',
                     }}
                   >
-                    {buttonText || "Listen Now"}
+                    {recentTrackData?.buttonText || "Listen Now"}
                   </button>
                 </li>
               </ul>
@@ -90,15 +84,18 @@ const RecentTrack = ({ recentTrack }) => {
               className="relative z-10 inline-block pt-11 lg:pt-0 mt-6"
             >
               <div className="relative w-full max-w-[500px] mx-auto">
-                <Image
-                  src={image && urlFor(image).url()}
-                  alt="hero"
-                  layout="responsive"
-                  width={1067} // Specify the aspect ratio width
-                  height={1600} // Specify the aspect ratio height
-                  className="rounded-[6%] w-full h-auto"
-                  loading="lazy"
-                />
+                {recentTrackData?.image && (
+                  <Image
+                    src={urlFor(recentTrackData.image).url()}
+                    alt="hero"
+                    layout="responsive"
+                    width={1067} // Specify the aspect ratio width
+                    height={1600} // Specify the aspect ratio height
+                    objectFit="cover"
+                    className="rounded-[6%] w-full h-auto"
+                    loading="lazy"
+                  />
+                )}
               </div>
             </motion.div>
           </div>

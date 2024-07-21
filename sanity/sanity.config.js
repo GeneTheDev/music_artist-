@@ -5,7 +5,10 @@
 import {defineConfig} from 'sanity'
 import {deskTool} from 'sanity/desk'
 import {visionTool} from '@sanity/vision'
-import {schemaTypes} from './schemas' // Ensure this path is correct
+import {schemaTypes} from './schemas'
+
+// Assuming you have a structure definition in 'structure.js'
+// import myCustomStructure from './structure'
 
 export default defineConfig({
   name: 'default',
@@ -17,13 +20,14 @@ export default defineConfig({
   basePath: '/studio',
 
   plugins: [
-    structureTool(),
-    // Vision is a tool that lets you query your content with GROQ in the studio
-    // https://www.sanity.io/docs/the-vision-plugin
-    visionTool({defaultApiVersion: apiVersion}),
+    deskTool(), // Use deskTool without structureTool
+    visionTool({defaultApiVersion: '2021-03-25'}),
   ],
 
   schema: {
     types: schemaTypes,
   },
+
+  // If you have a custom structure, use it here
+  // structure: myCustomStructure,
 })

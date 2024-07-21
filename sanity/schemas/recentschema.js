@@ -9,8 +9,23 @@ const recentSchema = {
       type: 'string',
     },
     {
-      name: 'description',
-      title: 'Description',
+      name: 'subtitle',
+      title: 'Subtitle',
+      type: 'text',
+    },
+    {
+      name: 'subtitle2',
+      title: 'Subtitle2',
+      type: 'text',
+    },
+    {
+      name: 'subtitle3',
+      title: 'Subtitle3',
+      type: 'text',
+    },
+    {
+      name: 'buttonText',
+      title: 'ButtonText',
       type: 'string',
     },
     {

@@ -1,5 +1,3 @@
-// import { defineConfig } from 'tailwindcss';
-
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [

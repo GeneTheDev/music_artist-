@@ -5,7 +5,12 @@ const Hero = () => {
   const [heroData, setHeroData] = useState(null);
 
   useEffect(() => {
-    sanityClient.fetch(`*[_type == "hero"][0]`)
+    sanityClient.fetch(`*[_type == "hero"][0]{
+      title,
+      description,
+      image,
+      buttonText
+    }`)
       .then((data) => setHeroData(data))
       .catch((error) => {
         console.error('Error fetching hero data:', error);
@@ -52,14 +57,15 @@ const Hero = () => {
               >
                 {heroData?.description || 'Discover our services and offers.'}
               </p>
-              <button
+              <a
+                href="mailto:youremail@example.com" // Replace with your email
                 className="px-4 py-2 mt-4 bg-blue-600 text-white rounded hover:bg-blue-700 transition duration-300"
                 style={{
                   background: 'linear-gradient(to right, rgba(255, 0, 0, 0.9), rgba(255, 200, 200, 0.9))',
                 }}
               >
-                Learn More
-              </button>
+                {heroData?.buttonText || 'Learn More'} {/* Use the dynamic button text */}
+              </a>
             </div>
           </div>
         </div>

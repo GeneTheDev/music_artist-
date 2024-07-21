@@ -1,4 +1,4 @@
-// schemas/heroschema.js
+// schemas/heroSchema.js
 
 const heroSchema = {
   name: 'hero',
@@ -23,7 +23,12 @@ const heroSchema = {
         hotspot: true, // Enables image cropping
       },
     },
+    {
+      name: 'buttonText',
+      title: 'Button Text',
+      type: 'string', // Add this line
+    },
   ],
 }
 
-export default heroSchema
+export default heroSchema;

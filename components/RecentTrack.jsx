@@ -17,7 +17,7 @@ const RecentTrack = () => {
   }, []);
 
   return (
-    <div className="relative pt-[120px] pb-[110px] lg:pt-[150px] bg-[#fff]">
+    <div className="relative pt-[120px] pb-[110px] lg:pt-[150px] bg-[#fff] font-poppins">
       <div className="container mx-auto px-4 md:px-10 flex flex-wrap lg:items-start lg:text-left text-center lg:text-left">
         <div className="w-full lg:w-5/12 px-4 mb-10 lg:mb-0 flex flex-col items-center lg:items-start justify-center">
           <div className="hero-content">
@@ -81,7 +81,7 @@ const RecentTrack = () => {
               initial="hidden"
               animate="visible"
               transition={{ duration: 0.5, delay: 0.25 }}
-              className="relative z-10 inline-block pt-11 lg:pt-0 mt-6"
+              className="relative z-0 inline-block pt-11 lg:pt-0 mt-6"
             >
               <div className="relative w-full max-w-[500px] mx-auto">
                 {recentTrackData?.image && (

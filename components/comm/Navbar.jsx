@@ -13,7 +13,7 @@ const Navbar = ({ site }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="w-full text-white py-1 fixed top-0 left-0 flex flex-col md:flex-row items-center justify-between z-10 h-auto md:h-24 bg-gray-900" style={{
+    <nav className="w-full text-white py-1 fixed top-0 left-0 flex flex-col md:flex-row items-center justify-between z-50 h-auto md:h-24 bg-gray-900" style={{
       background: 'linear-gradient(to right, rgba(255, 0, 0, 0.9), rgba(255, 200, 200, 0.9))',
     }}>
       <div className="container mx-auto flex flex-wrap items-center justify-between px-4 py-2">

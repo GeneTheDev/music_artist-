@@ -44,13 +44,13 @@ const Footer = ({ site }) => {
             <h4 className="text-lg font-medium mb-4">Buy Music</h4>
             <ul className="space-y-2">
               <li>
-                <a href={site.platforms.itunes} target="_blank" rel="noopener noreferrer" className="hover:underline text-white">
-                  iTunes
+                <a href={site.platforms.pandora} target="_blank" rel="noopener noreferrer" className="hover:underline text-white">
+                  Pandora
                 </a>
               </li>
               <li>
-                <a href={site.platforms.beatport} target="_blank" rel="noopener noreferrer" className="hover:underline text-white">
-                  Beatport
+                <a href={site.platforms.deezer} target="_blank" rel="noopener noreferrer" className="hover:underline text-white">
+                  Deezer
                 </a>
               </li>
               <li>
@@ -59,8 +59,8 @@ const Footer = ({ site }) => {
                 </a>
               </li>
               <li>
-                <a href={site.platforms.bandcamp} target="_blank" rel="noopener noreferrer" className="hover:underline text-white">
-                  Bandcamp
+                <a href={site.platforms.tidal} target="_blank" rel="noopener noreferrer" className="hover:underline text-white">
+                  Tidal
                 </a>
               </li>
             </ul>

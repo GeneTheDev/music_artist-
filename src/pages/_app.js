@@ -8,7 +8,8 @@ import Footer from "../../components/Footer";
 function App({ Component, pageProps }) {
   const siteData = {
     platforms: {
-      spotify: "https://open.spotify.com/artist/5w05TPWQDGWUOSivHsZcfw?go=1&sp_cid=0a910f8aea0271031a1ae9ed394edf5a&utm_source=embed_player_p&utm_medium=desktop&nd=1&dlsi=b2cec29933dc46e5",
+      spotify:
+        "https://open.spotify.com/artist/5w05TPWQDGWUOSivHsZcfw?go=1&sp_cid=0a910f8aea0271031a1ae9ed394edf5a&utm_source=embed_player_p&utm_medium=desktop&nd=1&dlsi=b2cec29933dc46e5",
       soundcloud: "https://on.soundcloud.com/NVL9cdCkGJRX4sd58",
       youtube: "https://youtube.com/channel/your-artist-id",
       apple: "https://music.apple.com/us/artist/your-artist-id",

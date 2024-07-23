@@ -1,3 +1,4 @@
+
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { sanityClient } from "../components/lib/client";
@@ -62,6 +63,7 @@ const RecentTrack = () => {
                     style={{
                       background: 'linear-gradient(to right, rgba(255, 0, 0, 0.9), rgba(255, 200, 200, 0.9))',
                     }}
+                    onClick={() => window.location.href = 'https://music.lnk.to/dMOBTR'}
                   >
                     {recentTrackData?.buttonText || "Listen Now"}
                   </button>

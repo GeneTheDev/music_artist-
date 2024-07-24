@@ -22,7 +22,7 @@ const Videos = () => {
         background: 'linear-gradient(to right, rgba(255, 0, 0, 0.9), rgba(255, 200, 200, 0.9))',
       }}>
         <div className="container mx-auto p-4" style={{ overflowX: "hidden" }}>
-          <h1 className="mt-3 text-uppercase text-white">Music + Videos</h1>
+          <h1 className="text-3xl md:text-5xl p-6 text-[#fff] font-bold">Music + Videos</h1>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-white">
             {videoCards.map((card) => (
               <div key={card._id} className="mt-4" data-aos="fade-in">

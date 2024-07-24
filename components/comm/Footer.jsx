@@ -1,5 +1,4 @@
 import React from "react";
-import Link from "next/link";
 import { Icon } from "@iconify/react";
 import spotifyIcon from "@iconify/icons-simple-icons/spotify";
 import soundcloudIcon from "@iconify/icons-simple-icons/soundcloud";
@@ -7,6 +6,7 @@ import youtubeIcon from "@iconify/icons-simple-icons/youtube";
 import instagramIcon from "@iconify/icons-simple-icons/instagram";
 import facebookIcon from "@iconify/icons-simple-icons/facebook";
 import twitterIcon from "@iconify/icons-simple-icons/twitter";
+import styles from "../../styles/about.module.css";
 
 const Footer = ({ site }) => {
   return (
@@ -17,7 +17,7 @@ const Footer = ({ site }) => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
             <h4 className="text-lg font-medium mb-4">Stream Music</h4>
-            <ul className="space-y-2 text-white">
+            <ul className={`space-y-2 text-white ${styles.poppinsFont}`}>
               <li>
                 <a href={site.platforms.spotify} target="_blank" rel="noopener noreferrer" className="hover:underline text-white">
                   Spotify
@@ -42,7 +42,7 @@ const Footer = ({ site }) => {
           </div>
           <div>
             <h4 className="text-lg font-medium mb-4">Buy Music</h4>
-            <ul className="space-y-2">
+            <ul className={`space-y-2 text-white ${styles.poppinsFont}`}>
               <li>
                 <a href={site.platforms.pandora} target="_blank" rel="noopener noreferrer" className="hover:underline text-white">
                   Pandora

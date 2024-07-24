@@ -60,7 +60,7 @@ const Navbar = ({ site }) => {
               </ScrollLink>
             </li>
             <li className="list-none my-2 md:my-0 mx-5 text-lg">
-              <ScrollLink to="videos" smooth={true} duration={700} offset={-88} onClick={() => setIsOpen(false)} className="cursor-pointer hover:text-gray-300 block">
+              <ScrollLink to="videos" smooth={true} duration={700} offset={-64} onClick={() => setIsOpen(false)} className="cursor-pointer hover:text-gray-300 block">
                 Stream
               </ScrollLink>
             </li>

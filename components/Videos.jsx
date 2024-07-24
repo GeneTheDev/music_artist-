@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { sanityClient } from "../components/lib/client";
+import { motion } from "framer-motion";
 
 const Videos = () => {
-  const [videoCards, setVideoCards] = useState(null);
+  const [videoCards, setVideoCards] = useState([]); // Initialize with an empty array
 
   useEffect(() => {
     sanityClient
@@ -13,18 +14,25 @@ const Videos = () => {
       });
   }, []);
 
-  if (!videoCards) {
-    return <div>Loading...</div>;
-  }
-
   return (
-      <section id="yt_videos" className="bg-darkest text-secondary text-center py-5" style={{
+    <section
+      id="yt_videos"
+      className="bg-darkest text-secondary text-center py-5"
+      style={{
         background: 'linear-gradient(to right, rgba(255, 0, 0, 0.9), rgba(255, 200, 200, 0.9))',
-      }}>
-        <div className="container mx-auto p-4" style={{ overflowX: "hidden" }}>
-          <h1 className="text-3xl md:text-5xl p-6 text-[#fff] font-bold">Music + Videos</h1>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-white">
-            {videoCards.map((card) => (
+      }}
+    >
+      <div className="container mx-auto p-4" style={{ overflowX: "hidden" }}>
+        <motion.div
+          initial={{ opacity: 0, y: -50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+        >
+          <h1 className="text-2xl md:text-4xl p-6 text-[#fff] font-bold">Music + Videos</h1>
+        </motion.div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-white">
+          {videoCards.length > 0 ? (
+            videoCards.map((card) => (
               <div key={card._id} className="mt-4" data-aos="fade-in">
                 <div className="video-container" style={{ borderRadius: '10px', overflow: 'hidden' }}>
                   <iframe
@@ -40,11 +48,14 @@ const Videos = () => {
                 <h3 className="text-lg font-semibold mt-2">{card.title}</h3>
                 <p>{card.description}</p>
               </div>
-            ))}
-          </div>
+            ))
+          ) : (
+            <p>No videos available.</p>
+          )}
         </div>
-      </section>
-    );
-  };
+      </div>
+    </section>
+  );
+};
 
 export default Videos;

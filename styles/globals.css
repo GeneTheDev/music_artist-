@@ -27,6 +27,12 @@ code {
   background-color: #2563eb;
 }
 
+/* globals.css or about.module.css */
+.poppins-font {
+  font-family: 'Poppins', sans-serif;
+}
+
+
 .track {
   position: absolute;
   white-space: nowrap;

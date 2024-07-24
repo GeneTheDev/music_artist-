@@ -65,12 +65,12 @@ const Navbar = ({ site }) => {
               </ScrollLink>
             </li>
             <li className="list-none my-2 md:my-0 mx-5 text-lg">
-              <ScrollLink to="about" smooth={true} duration={700} offset={-88} onClick={() => setIsOpen(false)} className="cursor-pointer hover:text-gray-300 block">
+              <ScrollLink to="about" smooth={true} duration={700} offset={-5} onClick={() => setIsOpen(false)} className="cursor-pointer hover:text-gray-300 block">
                 About
               </ScrollLink>
             </li>
           </ul>
-          <ul className="flex flex-col md:flex-row items-center justify-center md:space-x-4 w-full md:w-auto mt-4 md:mt-0 md:ml-8">
+          <ul className="flex flex-row md:flex-row items-center justify-center md:space-x-4 w-full md:w-auto mt-4 md:mt-0 md:ml-8">
             <li className="list-none inline-block mx-2 md:mx-0">
               <Link href={site.platforms.spotify} target="_blank" rel="noopener noreferrer">
                 <Icon icon={spotifyIcon} className="text-2xl" />

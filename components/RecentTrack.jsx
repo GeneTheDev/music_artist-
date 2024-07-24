@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { sanityClient } from "../components/lib/client";
@@ -19,7 +18,7 @@ const RecentTrack = () => {
 
   return (
     <div className="relative pt-[120px] pb-[110px] lg:pt-[150px] bg-[#fff] font-poppins">
-      <div className="container mx-auto px-4 md:px-10 flex flex-wrap lg:items-start lg:text-left text-center lg:text-left">
+      <div className="container mx-auto px-4 md:px-10 flex flex-wrap lg:items-center lg:text-left text-center">
         <div className="w-full lg:w-5/12 px-4 mb-10 lg:mb-0 flex flex-col items-center lg:items-start justify-center">
           <div className="hero-content">
             <motion.div
@@ -38,11 +37,11 @@ const RecentTrack = () => {
                   {recentTrackData?.subtitle || "Listen Now"}
                 </span>
               </h1>
-              <span className="text-5xl sm:text-7xl">
+              <span className="text-3xl sm:text-5xl">
                 {recentTrackData?.subtitle2 || "Listen Now"}
                 <br />
               </span>
-              <span className="text-5xl sm:text-7xl">
+              <span className="text-2xl sm:text-3xl">
                 {recentTrackData?.subtitle3 || "Listen Now"}
               </span>
             </motion.div>
@@ -70,10 +69,31 @@ const RecentTrack = () => {
                 </li>
               </ul>
             </motion.div>
+            {/* Spotify Embed Code */}
+            <motion.div
+              variants={{
+                visible: { opacity: 1, y: 0 },
+                hidden: { opacity: 0, y: 75 },
+              }}
+              initial="hidden"
+              animate="visible"
+              transition={{ duration: 0.5, delay: 0.5 }}
+              className="mt-6 w-full"
+            >
+              <iframe
+                style={{ borderRadius: '12px' }}
+                src="https://open.spotify.com/embed/track/7vthYClSaSt39BoStr4Y5U?utm_source=generator"
+                width="100%"
+                height="352"
+                frameBorder="0"
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                loading="lazy"
+              ></iframe>
+            </motion.div>
           </div>
         </div>
         <div className="hidden lg:block lg:w-1/12"></div>
-        <div className="w-full lg:w-6/12 px-4 flex justify-center lg:justify-end">
+        <div className="w-full lg:w-6/12 px-4 flex justify-center lg:justify-end items-center">
           <div className="lg:ml-auto lg:text-right">
             <motion.div
               variants={{

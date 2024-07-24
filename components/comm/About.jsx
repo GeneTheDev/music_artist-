@@ -33,10 +33,10 @@ const About = () => {
           )}
         </div>
         <div className="text-container">
-          <h2 className="text-2xl font-bold mb-4">
+          <h2 className="text-3xl md:text-5xl lg:text-7xl p-2 text-[#00000] font-bold">
             {aboutData?.title || 'About Us'}
           </h2>
-          <p className="text-lg">
+          <p className="text-base md:text-lg lg:text-xl">
             {aboutData?.description || 'Description not available.'}
           </p>
         </div>

@@ -46,7 +46,7 @@ const Navbar = ({ site }) => {
       <div className="container mx-auto flex flex-wrap items-center justify-between px-4 py-2">
         <div className="logo flex justify-between w-full md:w-auto">
           <Link href="/" className="block w-24 h-auto rounded-lg p-2 cursor-pointer">
-            EliEzer O.R.
+            EliEzer
           </Link>
           <button onClick={toggleMenu} className="md:hidden block">
             <GiHamburgerMenu size={30} className="text-white" />

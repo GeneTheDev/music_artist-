@@ -103,7 +103,7 @@ const Footer = ({ site }) => {
               <li>
                 <span>Email: </span>
                 <a href="mailto:info@EliEzer.com" className="hover:underline text-white">
-                  eliezeronrecords@gmail.com
+                  eliezeronrecord@gmail.com
                 </a>
               </li>
             </ul>

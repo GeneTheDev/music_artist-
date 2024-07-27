@@ -24,11 +24,11 @@ const heroSchema = {
       },
     },
     {
-      name: 'buttonText',
-      title: 'Button Text',
-      type: 'string', // Add this line
+      name: 'email',
+      type: 'string',
+      title: 'Email',
     },
   ],
 }
 
-export default heroSchema;
+export default heroSchema

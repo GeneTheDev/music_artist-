@@ -58,7 +58,7 @@ const RecentTrack = () => {
                 <li>
                   <button
                     type="button"
-                    className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition duration-300"
+                    className="px-4 py-2 bg-blue-600 text-white rounded transform transition-transform duration-300 ease-in-out hover:scale-105 hover:bg-blue-700 hover:text-gray-200"
                     style={{
                       background: 'linear-gradient(to right, rgba(255, 0, 0, 0.9), rgba(255, 200, 200, 0.9))',
                     }}

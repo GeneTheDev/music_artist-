@@ -9,7 +9,8 @@ const Hero = () => {
       title,
       description,
       image,
-      buttonText
+      buttonText,
+      email // Fetch the email address
     }`)
       .then((data) => setHeroData(data))
       .catch((error) => {
@@ -47,7 +48,7 @@ const Hero = () => {
                   textShadow: '2px 2px 4px rgba(0, 0, 0, 0.6)', 
                 }}
               >
-                {heroData?.title || 'Welcome to Our Website'}
+                {heroData?.title || 'EliEzer O.R.'}
               </h1>
               <p
                 className="text-lg md:text-xl p-2 text-[#fff]"
@@ -55,16 +56,16 @@ const Hero = () => {
                   textShadow: '1px 1px 2px rgba(0, 0, 0, 0.6)',
                 }}
               >
-                {heroData?.description || 'Discover our services and offers.'}
+                {heroData?.description || 'Musician And Producer'}
               </p>
               <a
-                href="mailto:youremail@example.com" // Replace with your email
-                className="px-4 py-2 mt-4 bg-blue-600 text-white rounded hover:bg-blue-700 transition duration-300"
+                href={`mailto:${heroData?.email || 'youremail@example.com'}`} // Use the dynamic email address
+                className="px-4 py-2 mt-4 bg-blue-600 text-white rounded transition duration-300 ease-in-out transform hover:scale-105 hover:bg-blue-700 hover:text-gray-200"
                 style={{
                   background: 'linear-gradient(to right, rgba(255, 0, 0, 0.9), rgba(255, 200, 200, 0.9))',
                 }}
               >
-                {heroData?.buttonText || 'Learn More'} {/* Use the dynamic button text */}
+                {heroData?.buttonText || 'eliezeronrecord.com'} {/* Use the dynamic button text */}
               </a>
             </div>
           </div>

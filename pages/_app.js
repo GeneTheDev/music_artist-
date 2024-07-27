@@ -17,9 +17,9 @@ function App({ Component, pageProps }) {
       amazon: "https://music.amazon.com/artists/B09WN8WC35/eliezer-o-r",
     },
     socials: {
-      instagram: "https://instagram.com",
-      facebook: "https://facebook.com",
-      twitter: "https://twitter.com",
+      instagram: "https://instagram.com/eli.ezer.music",
+      // facebook: "https://facebook.com",
+      // twitter: "https://twitter.com",
     },
   };
 

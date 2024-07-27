@@ -88,7 +88,7 @@ const Footer = ({ site }) => {
                   <Icon icon={instagramIcon} className="text-2xl text-white" />
                 </a>
               </li>
-              <li>
+              {/* <li>
                 <a href={site.socials.facebook} target="_blank" rel="noopener noreferrer">
                   <Icon icon={facebookIcon} className="text-2xl text-white" />
                 </a>
@@ -97,13 +97,13 @@ const Footer = ({ site }) => {
                 <a href={site.socials.twitter} target="_blank" rel="noopener noreferrer">
                   <Icon icon={twitterIcon} className="text-2xl text-white" />
                 </a>
-              </li>
+              </li> */}
             </ul>
             <ul className="space-y-2">
               <li>
                 <span>Email: </span>
                 <a href="mailto:info@EliEzer.com" className="hover:underline text-white">
-                  info@EliEzer.com
+                  eliezeronrecords@gmail.com
                 </a>
               </li>
             </ul>

@@ -91,7 +91,7 @@ const Navbar = ({ site }) => {
                 <Icon icon={instagramIcon} className="text-2xl" />
               </Link>
             </li>
-            <li className="list-none inline-block mx-2 md:mx-0">
+            {/* <li className="list-none inline-block mx-2 md:mx-0">
               <Link href={site.socials.facebook} target="_blank" rel="noopener noreferrer">
                 <Icon icon={facebookIcon} className="text-2xl" />
               </Link>
@@ -100,7 +100,7 @@ const Navbar = ({ site }) => {
               <Link href={site.socials.twitter} target="_blank" rel="noopener noreferrer">
                 <Icon icon={twitterIcon} className="text-2xl" />
               </Link>
-            </li>
+            </li> */}
           </ul>
         </div>
       </div>

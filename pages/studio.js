@@ -1,6 +1,10 @@
+// pages/studio.js
+import React from "react";
 import { NextStudio } from "next-sanity/studio";
-import config from "../sanity/sanity.config"; // Make sure this path is correct
+import config from "../sanity.config";
 
-export default function StudioPage() {
+const StudioPage = () => {
   return <NextStudio config={config} />;
-}
+};
+
+export default StudioPage;

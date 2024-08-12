@@ -1,7 +1,7 @@
 // pages/studio.js
 import React from "react";
 import { NextStudio } from "next-sanity/studio";
-import config from "../sanity.config";
+import config from "../sanity/sanity.config";
 
 const StudioPage = () => {
   return <NextStudio config={config} />;

@@ -33,9 +33,9 @@ const Footer = ({ site }) => {
                   YouTube
                 </a>
               </li>
-              <li>
-                <a href={site.platforms.apple} target="_blank" rel="noopener noreferrer" className="hover:underline text-white">
-                  Apple Music
+               <li>
+                <a href={site.platforms.pandora} target="_blank" rel="noopener noreferrer" className="hover:underline text-white">
+                  Pandora
                 </a>
               </li>
             </ul>
@@ -44,15 +44,16 @@ const Footer = ({ site }) => {
             <h4 className="text-lg font-medium mb-4">Buy Music</h4>
             <ul className={`space-y-2 text-white ${styles.poppinsFont}`}>
               <li>
-                <a href={site.platforms.pandora} target="_blank" rel="noopener noreferrer" className="hover:underline text-white">
-                  Pandora
+                <a href={site.platforms.apple} target="_blank" rel="noopener noreferrer" className="hover:underline text-white">
+                  Apple Music
                 </a>
               </li>
-              <li>
+             
+              {/* <li>
                 <a href={site.platforms.deezer} target="_blank" rel="noopener noreferrer" className="hover:underline text-white">
                   Deezer
                 </a>
-              </li>
+              </li> */}
               <li>
                 <a href={site.platforms.amazon} target="_blank" rel="noopener noreferrer" className="hover:underline text-white">
                   Amazon

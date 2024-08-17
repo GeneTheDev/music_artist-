@@ -86,7 +86,7 @@ const RecentTrack = () => {
                 width="100%"
                 height="352"
                 frameBorder="0"
-                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen;"
                 loading="lazy"
               ></iframe>
             </motion.div>
@@ -110,11 +110,9 @@ const RecentTrack = () => {
                   <Image
                     src={urlFor(recentTrackData.image).url()}
                     alt="hero"
-                    layout="responsive"
-                    width={1067} // Specify the aspect ratio width
-                    height={1600} // Specify the aspect ratio height
-                    objectFit="cover"
-                    className="rounded-[6%] w-full h-auto"
+                    width={1067} // Specify the width
+                    height={1600} // Specify the height
+                    className="rounded-[6%] w-full h-auto object-cover"
                     loading="lazy"
                   />
                 )}

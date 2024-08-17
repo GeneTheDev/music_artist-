@@ -35,15 +35,15 @@ const Videos = () => {
             videoCards.map((card) => (
               <div key={card._id} className="mt-4" data-aos="fade-in">
                 <div className="video-container" style={{ borderRadius: '10px', overflow: 'hidden' }}>
-                  <iframe
-                    width="100%"
-                    height="315"
-                    src={card.youtubeUrl.replace("watch?v=", "embed/")}
-                    frameBorder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                    title={card.title}
-                  ></iframe>
+                <iframe
+                  width="100%"
+                  height="315"
+                  src={card.youtubeUrl.replace("watch?v=", "embed/")}
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  title={card.title}
+                  />                
                 </div>
                 <h3 className="text-lg font-semibold mt-2">{card.title}</h3>
                 <p>{card.description}</p>

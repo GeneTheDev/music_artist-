@@ -2,17 +2,19 @@
   "compilerOptions": {
     "paths": {
       "@/*": ["./src/*"]
-    }
+    },
+    "allowJs": true,           // Allows JavaScript files to be compiled by TypeScript
+    "checkJs": false,          // Disables type checking for JavaScript files
+    "jsx": "react",            // Specifies JSX handling (if using React)
+    "noEmit": true             // Prevents emitting output files
   },
   "include": [
-    "node_modules/@sanity/base/types/**/*.ts",
-    "node_modules/@sanity/types/**/*.d.ts",
-    "./**/*.ts",
-    "./**/*.tsx"
+    "./src/**/*"              // Include all files in the src directory
   ],
   "exclude": [
-    "node_modules",
-    "**/*.test.ts",
-    "**/*.test.tsx"
+    "node_modules",           // Exclude node_modules
+    "**/*.test.js",           // Exclude test files if any
+    "build",                  // Exclude build output directory
+    "dist"                    // Exclude distribution output directory
   ]
 }

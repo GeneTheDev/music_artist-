@@ -23,9 +23,8 @@ const About = () => {
               <Image 
                 src={urlFor(aboutData.image).url()} 
                 alt="About Us"
-                layout="responsive"
-                width={1067} 
-                height={1600} 
+                width={500}  // Specify width for responsive image
+                height={750}  // Specify height for responsive image
                 className="rounded-[6%] w-full h-auto"
                 loading="lazy"
               />

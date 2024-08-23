@@ -8,10 +8,10 @@ import About from "../components/comm/About";
 const Home = () => {
   return (
     <div>
-      <section id="hero">
+      <section id="hero" style={{ marginBottom: "0" }}>
         <Hero />
       </section>
-      <section id="banner">
+      <section id="banner" style={{ marginTop: "0" }}>
         <Banner />
       </section>
       <section id="recent-track">

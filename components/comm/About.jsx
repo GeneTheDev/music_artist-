@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { sanityClient, urlFor } from '../../components/lib/client';
 import Image from 'next/image';
-import styles from '../../styles/about.module.css'; // Ensure this file exists in the same directory
+import styles from '../../styles/about.module.css'; 
 
 const About = () => {
   const [aboutData, setAboutData] = useState(null);

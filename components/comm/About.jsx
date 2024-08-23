@@ -15,27 +15,27 @@ const About = () => {
   }, []);
 
   return (
-    <div className="container mx-auto p-4 pt-[150px] pb-[110px]">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 items-center">
-        <div className="image-container mb-4 md:mb-0 md:mr-8">
+    <div className="container mx-auto px-4 pt-[100px] pb-[60px] sm:pt-[120px] sm:pb-[80px]">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+        <div className="mb-4 md:mb-0">
           {aboutData?.image && (
-            <div className="relative w-full max-w-[500px] mx-auto">
+            <div className="relative w-full max-w-[400px] sm:max-w-[450px] md:max-w-[500px] mx-auto">
               <Image 
                 src={urlFor(aboutData.image).url()} 
                 alt="About Us"
                 width={500}  // Specify width for responsive image
                 height={750}  // Specify height for responsive image
-                className="rounded-[6%] w-full h-auto"
+                className="rounded-[6%] w-full h-auto object-cover"
                 loading="lazy"
               />
             </div>
           )}
         </div>
-        <div className="text-container">
-          <h2 className="text-3xl md:text-5xl lg:text-5xl p-2 text-[#00000] font-bold">
+        <div className="text-center md:text-left">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl p-2 text-[#000000] font-bold">
             {aboutData?.title || 'About Us'}
           </h2>
-          <p className={`text-base md:text-lg lg:text-xl ${styles.poppinsFont}`}>
+          <p className={`text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed ${styles.poppinsFont}`}>
             {aboutData?.description || 'Description not available.'}
           </p>
         </div>
